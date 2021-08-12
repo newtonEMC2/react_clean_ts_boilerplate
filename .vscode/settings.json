@@ -1,0 +1,13 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    //eslint
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact"
+    ],
+    //import-cost extension
+    "importCost.debug": true,
+    "importCost.timeout": 100000
+}
