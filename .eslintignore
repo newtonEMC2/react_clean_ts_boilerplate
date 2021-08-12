@@ -1,0 +1,6 @@
+*.css
+*.svg
+package*.json
+node_modules
+build
+docs

@@ -1,13 +1,22 @@
 {
+    //eslint
+    "editor.formatOnSave": true,
+    "eslint.alwaysShowStatus": true,
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
     },
-    //eslint
     "eslint.validate": [
         "javascript",
-        "javascriptreact"
+        "typescript",
+        "javascriptreact",
+        "typescriptreact"
     ],
     //import-cost extension
     "importCost.debug": true,
     "importCost.timeout": 100000
 }
+
+
+    
+    

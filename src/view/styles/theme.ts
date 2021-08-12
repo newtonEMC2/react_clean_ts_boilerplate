@@ -1,23 +1,24 @@
-import { createTheme, responsiveFontSizes } from '@material-ui/core/styles'
-import normalize from './normalize'
+import { createTheme, responsiveFontSizes } from '@material-ui/core/styles';
+import normalize from './normalize';
 
 // Create a theme instance.
+// eslint-disable-next-line import/no-mutable-exports
 let theme = createTheme({
   overrides: {
     MuiCssBaseline: {
-      '@global': normalize
+      '@global': normalize,
     },
     MuiButton: {
       root: {
         borderRadius: 6,
         paddingLeft: '2rem',
         paddingRight: '2rem',
-        textTransform: 'none'
-      }
+        textTransform: 'none',
+      },
     },
     MuiTab: {
-      root: { textTransform: 'none' }
-    }
+      root: { textTransform: 'none' },
+    },
   },
   palette: {
     // type: 'dark',
@@ -39,32 +40,32 @@ let theme = createTheme({
     // buttons
     MuiButton: {
       variant: 'contained',
-      disableElevation: true
+      disableElevation: true,
     },
     MuiButtonBase: {
-      centerRipple: true
+      centerRipple: true,
     },
     // paper
     MuiPaper: {
-      square: true
+      square: true,
     },
     // textfield
     MuiTextField: {
-      variant: 'outlined'
-    }
+      variant: 'outlined',
+    },
   },
-  spacing: factor => `${0.25 * factor}rem`, // (Bootstrap strategy)
+  spacing: (factor) => `${0.25 * factor}rem`, // (Bootstrap strategy)
   typography: {
     fontFamily: ['Open Sans', 'Arial'].join(','),
-    fontSize: 14 // default is 16
-  }
+    fontSize: 14, // default is 16
+  },
 
-})
+});
 
 // theme.palette.type === 'dark' ? theme.palette.background.grey1 = '#616161' : theme.palette.background.grey1 = '#F7F7F7'
 
 // theme.rem = (px) => `${px / theme.typography.fontSize}rem`
 
-theme = responsiveFontSizes(theme)
+theme = responsiveFontSizes(theme);
 
-export default theme
+export default theme;
