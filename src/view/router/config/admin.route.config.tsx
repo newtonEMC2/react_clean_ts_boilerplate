@@ -1,11 +1,11 @@
-// import DashboardView from 'views/Dashboard/dashboard.view';
 import React from 'react';
+import Dashboard from '../../views/dashboard/dashboard.view';
 import { users, dashboard } from '../../constants/paths.const';
 
 const adminRoutes = [
   {
     path: dashboard,
-    component: () => <h1>dashhh</h1>,
+    component: Dashboard,
     exact: true,
     guarded: true,
     redirect: false,
