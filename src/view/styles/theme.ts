@@ -62,7 +62,9 @@ let theme = createTheme({
 
 });
 
-// theme.palette.type === 'dark' ? theme.palette.background.grey1 = '#616161' : theme.palette.background.grey1 = '#F7F7F7'
+// theme.palette.type === 'dark' ?
+// theme.palette.background.grey1 = '#616161' :
+// theme.palette.background.grey1 = '#F7F7F7'
 
 // theme.rem = (px) => `${px / theme.typography.fontSize}rem`
 

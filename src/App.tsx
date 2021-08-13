@@ -1,18 +1,12 @@
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 
-import Button from '@material-ui/core/Button';
+import IndexRoutingRoute from './view/router/routes';
 
-function App() {
-  return (
-    <div className="App">
-      <Button color="primary">
-
-        hola
-
-      </Button>
-      HELLLOOOOO
-    </div>
-  );
-}
+const App:React.FC = () => (
+  <Router>
+    <IndexRoutingRoute />
+  </Router>
+);
 
 export default App;
