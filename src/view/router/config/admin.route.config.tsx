@@ -1,5 +1,5 @@
-import React from 'react';
 import Dashboard from '../../views/dashboard/dashboard.view';
+import Users from '../../views/users/users.view';
 import { users, dashboard } from '../../constants/paths.const';
 
 const adminRoutes = [
@@ -12,7 +12,7 @@ const adminRoutes = [
   },
   {
     path: users,
-    component: () => <h1>usersss</h1>,
+    component: Users,
     exact: true,
     guarded: true,
     redirect: false,
