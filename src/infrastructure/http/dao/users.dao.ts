@@ -1,6 +1,6 @@
 import { httpEntity } from '../entity/http';
 
-const UsersDao: any = () => {
+const UsersDaoFactory: any = () => {
   const getUsers = ():any => httpEntity().http('https://jsonplaceholder.typicode.com/todos', 'GET')
     .then((res:any) => res.data)
     .catch((err:any) => { throw Error(err); });
@@ -11,6 +11,6 @@ const UsersDao: any = () => {
   };
 };
 
-const factory = UsersDao();
+const factory = UsersDaoFactory();
 
-export const httpDao = (): any => ({ ...factory });
+export const UsersDao = (): any => ({ ...factory });
