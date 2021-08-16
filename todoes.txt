@@ -1,1 +1,7 @@
+dependency injection on infrastucture to redux
+
+separate ui into containers 
+
+tests
+
 dont render layout, just view

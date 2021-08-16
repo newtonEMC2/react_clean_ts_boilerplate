@@ -1,4 +1,6 @@
-import { createStore, applyMiddleware, compose } from 'redux';
+import {
+  createStore, applyMiddleware, compose,
+} from 'redux';
 import rootReducer from './reducers';
 import { apiMiddl } from './middlewares/core/api.middl';
 import { splitterMiddl } from './middlewares/core/splitter.middl';
@@ -6,6 +8,8 @@ import { splitterMiddl } from './middlewares/core/splitter.middl';
 // import notificationMiddl from './middlewares/core/notification.middl';
 // import normalizeMiddl from './middlewares/core/normalize.middl';
 import usersMiddl from './middlewares/feature/users.middl';
+
+import * as infrastructure from '../infrastructure';
 
 // order of middl matters!
 const coreMiddl = [
@@ -19,6 +23,8 @@ const coreMiddl = [
 const featureMiddl = [
   usersMiddl,
 ];
+
+// const a = [...featureMiddl, ...coreMiddl].map((f) => f(infrastructure));
 
 // dev tool
 const composeEnhancers = (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -45,7 +51,7 @@ const store = createStore(
   rootReducer,
   deserializeState(),
   composeEnhancers(
-    applyMiddleware(...featureMiddl, ...coreMiddl),
+    applyMiddleware(...[...featureMiddl, ...coreMiddl].map((f) => f(infrastructure))),
   ),
 );
 

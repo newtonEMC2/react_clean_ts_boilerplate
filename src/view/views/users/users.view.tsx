@@ -1,21 +1,12 @@
-import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import React from 'react';
 
 import MainLayout from '../../layouts/mainLayout/mainLayout.layout';
+import { MainAccordionContainer } from '../../components/accordion/mainAccordion/mainAccordion.container';
 
-import { fetchUsers } from '../../../application/actions/users.action';
-
-const Users: React.FC = () => {
-  // const users = useSelector((state) => state.users) ?? [];
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(fetchUsers());
-  }, []);
-  return (
-    <MainLayout>
-      <div>helloooo</div>
-    </MainLayout>
-  );
-};
+const Users: React.FC = () => (
+  <MainLayout>
+    <MainAccordionContainer />
+  </MainLayout>
+);
 
 export default Users;

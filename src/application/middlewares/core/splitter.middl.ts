@@ -1,4 +1,4 @@
-export const splitterMiddl = () => (next:any) => (action:any) => {
+export const splitterMiddl = () => () => (next:any) => (action:any) => {
   if (Array.isArray(action)) {
     action.forEach((_action) => next(_action));
   } else {
