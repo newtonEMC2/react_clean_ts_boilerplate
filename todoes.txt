@@ -1,4 +1,5 @@
-dependency injection on infrastucture to redux
+
+add selector
 
 separate ui into containers 
 

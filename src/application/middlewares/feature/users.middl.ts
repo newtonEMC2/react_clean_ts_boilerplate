@@ -6,7 +6,6 @@ import { apiRequest } from '../../actions/api.action';
 import { setUsers } from '../../actions/users.action';
 
 const usersMiddl = ({ http }: any) => () => (next: any) => (action: any) => {
-  console.log(http);
   switch (action.type) {
     case FETCH_USERS:
       next([
