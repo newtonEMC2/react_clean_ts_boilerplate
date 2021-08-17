@@ -1,0 +1,14 @@
+Dockerfile*
+.dockerignore
+.gitignore
+.vscode
+.git
+.env*
+.eslint*
+npm-debug.log
+README.md
+
+build
+node_modules
+deploy
+docs

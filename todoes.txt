@@ -1,6 +1,7 @@
 
+.gitignore not catched when context changed
+
 tests
 
-dockerize
 
 dont render layout, just view
