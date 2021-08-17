@@ -7,6 +7,7 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
     'airbnb',
+    'react-app/jest',
   ],
   settings: {
     'import/resolver': {

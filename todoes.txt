@@ -1,8 +1,6 @@
 
-add selector
-
-separate ui into containers 
-
 tests
+
+dockerize
 
 dont render layout, just view

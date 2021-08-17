@@ -14,7 +14,7 @@ const useStyles = makeStyles({
   },
 });
 
-export const SimpleAccordion: React.FC<{data:any}> = ({ data }) => {
+export const SimpleAccordion: React.FC<{data:any}> = ({ data = [] }) => {
   const classes = useStyles();
 
   return (
