@@ -29,7 +29,7 @@ const MainHeader: React.FC = () => {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            News
+            Newsf
           </Typography>
           <Button color="inherit">Login</Button>
         </Toolbar>

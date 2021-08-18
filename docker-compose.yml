@@ -3,19 +3,17 @@ services:
   front-dev:
     image: front:dev
     container_name: front_dev
-    build:
-      context: ../../
-      dockerfile: ./deploy/local/Dockerfile
+    build: .
     ports:
       - "3001:3000"
     volumes:
-      - ../../:/app
+      - ./src:/app/src
       - /app/node_modules
     environment: 
       CHOKIDAR_USEPOLLING: 1
       DISABLE_ESLINT_PLUGIN: 'true'
     env_file:
-      - ../../.env
+      - .env
     
       
   

@@ -29,7 +29,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.tsx",
     "lint:fix": "eslint src/**/*.tsx --fix",
-    "upenv": "docker-compose -f deploy/local/docker-compose.yml up -d --build"
+    "upenv": "docker-compose up -d --build"
   },
   "browserslist": {
     "production": [
