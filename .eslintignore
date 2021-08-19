@@ -5,3 +5,4 @@ node_modules
 build
 docs
 src/reportWebVitals.ts
+coverage

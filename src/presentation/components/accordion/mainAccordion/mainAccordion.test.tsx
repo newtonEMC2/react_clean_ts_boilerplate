@@ -4,11 +4,14 @@ import { render } from '@testing-library/react';
 import { SimpleAccordion } from './mainAccordion.component';
 
 describe('<MainAccordionComponent />', () => {
-  it('matches snapshot when empty', () => {
-    const component = render(<SimpleAccordion data={[]} />);
-    expect(component.container).toMatchSnapshot();
+  it('renders without crashing', () => {
+    render(<SimpleAccordion data={[]} />);
   });
-  it('matches snapshot when data values are passed on', () => {
+  it('creates no rows when passed empty data', () => {
+    const component = render(<SimpleAccordion data={[]} />);
+    expect(component.container.querySelectorAll('tr')).toHaveLength(1);
+  });
+  it('creates row when passed 1 element', () => {
     const data = [{
       userId: 1,
       id: 1,
@@ -16,9 +19,13 @@ describe('<MainAccordionComponent />', () => {
       completed: false,
     }];
     const component = render(<SimpleAccordion data={data} />);
-    expect(component.container).toMatchSnapshot();
+    component.getByText('delectus aut autem');
+    component.getByText(1);
+    component.getByText('false');
+    expect(component.container.querySelectorAll('tr')).toHaveLength(2);
   });
-  it('renders without crashing', () => {
-    render(<SimpleAccordion data={[]} />);
+  it('creates no rows when data equals undefined', () => {
+    const component = render(<SimpleAccordion data={undefined} />);
+    expect(component.container.querySelectorAll('tr')).toHaveLength(1);
   });
 });
