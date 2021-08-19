@@ -8,7 +8,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import theme from './view/styles/theme';
+import theme from './presentation/styles/theme';
 import store from './application/store';
 
 ReactDOM.render(

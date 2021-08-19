@@ -1,6 +1,4 @@
 
-.gitignore not catched when context changed
-
 tests
 
 
