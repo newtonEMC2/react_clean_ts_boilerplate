@@ -5,7 +5,7 @@ import {
 import { apiRequest } from '../../actions/api.action';
 import { setUsers } from '../../actions/users.action';
 
-const usersMiddl = ({ http }: any) => () => (next: any) => (action: any) => {
+export const usersMiddl = ({ http }: any) => () => (next: any) => (action: any) => {
   switch (action.type) {
     case FETCH_USERS:
       next([
@@ -31,5 +31,3 @@ const usersMiddl = ({ http }: any) => () => (next: any) => (action: any) => {
       next(action);
   }
 };
-
-export default usersMiddl;

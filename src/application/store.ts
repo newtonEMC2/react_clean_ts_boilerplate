@@ -7,7 +7,7 @@ import { splitterMiddl } from './middlewares/core/splitter.middl';
 // import uiMiddl from './middlewares/core/ui.middl';
 // import notificationMiddl from './middlewares/core/notification.middl';
 // import normalizeMiddl from './middlewares/core/normalize.middl';
-import usersMiddl from './middlewares/feature/users.middl';
+import { usersMiddl } from './middlewares/feature/users.middl';
 
 import * as infrastructure from '../infrastructure';
 
