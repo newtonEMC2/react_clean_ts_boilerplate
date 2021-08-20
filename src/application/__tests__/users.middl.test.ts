@@ -1,7 +1,6 @@
 import { usersMiddl } from '../middlewares/feature/users.middl';
-import { apiRequest } from '../actions/api.action';
 import { fetchUsers, setUsers } from '../actions/users.action';
-import { FETCH_USERS_SUCCESS, USERS_ERROR } from '../types';
+import { FETCH_USERS_SUCCESS } from '../types';
 
 const http = {
   UsersDao: () => ({
